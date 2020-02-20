@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from'../Card.js';
+import Card1 from'../Card1';
 import CardLayout from '../CardLayout';
 import Navbar from '../Navbar';
 import Banner from '../Banner';
@@ -31,33 +31,18 @@ function App() {
      
      <EmailSub/>
      <Navbar/>
-     <center>
-    <GridContainer>
-    <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
-              <h4>
-                Welcome to Alpha Sport, your go to platform for organizing and signing up to local sporting events.
-                From tennis to football and mixed martial arts to rugby we are lovers of all things active.
-                Below you can register for free and dive into our platform after making a profile.
-              </h4>
-              <br />
-              <Button
-                color="primary"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-primary" />
-               Register
-              </Button>
-            </GridItem>
-    </GridContainer>
-    </center>
      <Banner
         header='Alpha Sport'
         photo='https://cdn.pixabay.com/photo/2017/08/24/21/41/tartan-track-2678543_960_720.jpg'
         />
+     
+    
+     <Carousel/>
+     
+
+    
+    
+     
      <center>
         <CounterButton/>
         </center>
@@ -68,30 +53,31 @@ function App() {
     <LoadButton/>
      </center>
       <CardLayout>
-        <Card
+        <Card1
         image='https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80'
         title='Profile'
-        text = 'Here is the link to your profile page'
+        text = 'Here is the link to your profile page, register first!'
         link= 'Profile'
         />
-        <Card
+        <Card1
         image='https://images.unsplash.com/photo-1578625155481-7bc40a6481b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
         title='Event Calendar'
         text = 'Here is the link to all our events that you can join!'
         link= 'Calendar'
         
+        
         />
-        <Card
+        <Card1
         image='https://images.unsplash.com/photo-1543185377-b75671ac8741?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
         title='Sign up'
-        text = 'Here is the link to sign up and become part of Alpha Sport'
+        text = 'Here is the link to sign up and become part of Alpha Sport!'
         link= 'Register'
         
         />
         </CardLayout>
         
      
-        <Carousel/>
+        
         
         
         

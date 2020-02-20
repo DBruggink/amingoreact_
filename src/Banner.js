@@ -5,24 +5,25 @@ const Banner=(prop)=> {
         backgroundImage: `url(${prop.photo})`,
         backgroundSize: '100%',
         backgroundPosition: 'center',
-        minHeight: '300px',
-        opacity:'30%'
+        maxHeight: '170px',
+        marginTop:'-32px'
+        
     }
     const headerStyle={
         textAlign:'center',
         color:'white',
-        opacity: '100%'
-
-
+        marginTop:'-18px'
     }
-
+    
 
     return(
       <div className="jumbotron jumbotron-fluid"
         style={bannerStyle}>
             
     <h1 style={headerStyle}>{prop.header}</h1>
-
+    <center>
+    <button type="button" className="btn btn-primary" >Register</button>
+    </center>
         </div>
     )
 }

@@ -1,24 +1,26 @@
 import React from 'react';
+import { Height } from '@material-ui/icons';
 
-const Card= (prop)=>{
+const Card1= (prop)=>{
     const cardStyle={
       "width": '10%',
       'alt': '20%',
       backgroundColor: 'grey'
     }
     const imgStyle={
-      alignConent:'center'
+      alignConent:'center',
+      height:'150px'
     }
       return(
       <div className="card" style={cardStyle}>
-      <img src={prop.image} className="card-img-top" alt="10%" />
+      <img src={prop.image} className="card-img-top" style={imgStyle} />
       <div className="card-body">
         <h5 className='car-header'>{prop.title}</h5>
         <p className="card-text">{prop.text}</p>
-        <a href="#" className="btn btn-primary">{prop.link}</a>
+        <a href={prop.href} className="btn btn-primary">{prop.link}</a>
       </div>
     </div>
     ) 
   }
 
-export default Card;
+export default Card1;
