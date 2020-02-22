@@ -15,12 +15,14 @@ const EmailSub=()=>{
     if(state.saved === false) {
 return(
 
+  
+
 <div className="jumbotron">
         <div className="container" style={{"max-width": "600px"}}>
-          <h1 className="display-4">Hello, world!</h1>
-          <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <h1 className="display-4">Hello, Sport Enthusiast</h1>
+          <p className="lead">Enter your email below to be included to our email list and recieve our monthly updates and offers!</p>
           <hr className="my-4" />
-          <p>It uses utility for typography and spacing to space content out within the larger container.</p>
+          <p>Be updated with all posted events that match your interests. You wont regret it! </p>
           <div className="input-group mb-6">
             <input type="text" className="form-control" placeholder="Recipient's Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
             <div className="input-group-append">

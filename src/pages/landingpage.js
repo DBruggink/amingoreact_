@@ -30,7 +30,7 @@ function App() {
       
      
      <EmailSub/>
-     <Navbar/>
+    
      <Banner
         header='Alpha Sport'
         photo='https://cdn.pixabay.com/photo/2017/08/24/21/41/tartan-track-2678543_960_720.jpg'

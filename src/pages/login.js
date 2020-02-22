@@ -12,8 +12,10 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Navbar from '../Navbar'
 
 function Copyright() {
+  
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
@@ -61,7 +63,10 @@ export default function SignInSide() {
   const classes = useStyles();
 
   return (
+    
+   
     <Grid container component="main" className={classes.root}>
+      
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -103,19 +108,17 @@ export default function SignInSide() {
               type="submit"
               fullWidth
               variant="contained"
-              color="primary"
+              color="secondary"
               className={classes.submit}
             >
               Sign In
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
+             
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="./registration" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
