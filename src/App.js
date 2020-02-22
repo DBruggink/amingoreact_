@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Home from './pages/landingpage'
-import Login from './pages/loginpage'
+import Login from './pages/login'
 
 
 
@@ -9,7 +9,7 @@ import Login from './pages/loginpage'
 function App() {
   const [state, setState] = useState(
     {
-      page: 'Home'
+      page: 'Login'
     }
   )
   return (
