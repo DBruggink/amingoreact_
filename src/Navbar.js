@@ -26,7 +26,7 @@ const Navbar= ()=>{
         <a className="nav-link" href="#">Feed<span className="sr-only">(current)</span></a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">About Us <span className="sr-only">(current)</span></a>
+        <a className="nav-link" href="/about">About Us <span className="sr-only">(current)</span></a>
       </li>
     </ul>
     
