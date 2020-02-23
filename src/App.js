@@ -29,6 +29,7 @@ function App() {
     <Route path='/register' component={Registration} />
     <Route path='/about' component={About} />
 
+    <Route path='/about' component={About} />
 
   </Switch>
     </div>

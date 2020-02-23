@@ -30,7 +30,7 @@ const Navbar= ()=>{
       
       <Link to={'./about'}>
       <li className="nav-item">
-        <a className="nav-link" href="#">About Us <span className="sr-only">(current)</span></a>
+        <a className="nav-link" href="/about">About Us <span className="sr-only">(current)</span></a>
       </li>
       </Link>
     </ul>
