@@ -4,6 +4,8 @@ import Home from './pages/landingpage'
 import Login from './pages/login'
 import Navbar from './Navbar'
 import Registration from './pages/registration'
+import About from './pages/About'
+import './App.css'
 
 
 
@@ -24,7 +26,8 @@ function App() {
    
     <Route exact path='/' component={Home} />
     <Route path='/login' component={Login} />
-    <Route path='/registration' component={Registration} />
+    <Route path='/register' component={Registration} />
+    <Route path='/about' component={About} />
 
 
   </Switch>

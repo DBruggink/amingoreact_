@@ -19,15 +19,20 @@ const Navbar= ()=>{
       <li className="nav-item">
         <a className="nav-link" href="#">Profile <span className="sr-only">(current)</span></a>
       </li>
+      <Link to={'./register'}>
       <li className="nav-item">
-        <a className="nav-link" href="#">Events<span className="sr-only">(current)</span></a>
+        <a className="nav-link" href="#">Register<span className="sr-only">(current)</span></a>
       </li>
+      </Link>
       <li className="nav-item">
         <a className="nav-link" href="#">Feed<span className="sr-only">(current)</span></a>
       </li>
+      
+      <Link to={'./about'}>
       <li className="nav-item">
         <a className="nav-link" href="#">About Us <span className="sr-only">(current)</span></a>
       </li>
+      </Link>
     </ul>
     
   </div>
