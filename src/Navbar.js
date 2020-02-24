@@ -1,8 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
+import AppContext from './AppContext'
 
 const Navbar= ()=>{
 
+  const[globalState,setGlobalState]=useContext(AppContext)
+  
+  const logOut=()=>{
+    setGlobalState(
+      {
+        ...globalState,
+        loggedIn:false
+      }
+    )
+  }
+
+   
   
     return(
         <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark" >
@@ -36,9 +49,20 @@ const Navbar= ()=>{
     </ul>
     
   </div>
+
+  {      
+   globalState.loggedIn=== false &&
+  
   <Link to={'./login'}>
   <button  className='btn btn-danger' >Log In</button>
   </Link>
+   }
+   {
+     globalState.loggedIn=== true &&
+     <Link to='/'>
+     <button onClick={logOut}  className='btn btn-danger' >Log Out</button>
+     </Link>
+   }
 </nav>
 
     )

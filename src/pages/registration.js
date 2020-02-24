@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 
 
 const Registration=()=>{
@@ -49,9 +50,11 @@ const Registration=()=>{
                 </div>
 
                 <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <Link to='/login'>
                 <p className="forgot-password text-right">
                     Already registered <a href="#">sign in?</a>
                 </p>
+                </Link>
             </form>
 
     </div>

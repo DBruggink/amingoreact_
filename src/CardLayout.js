@@ -7,7 +7,7 @@ const CardLayout = (prop)=>{
         flexDirection: 'row',
         justifyContent: 'space-around',
         marginTop: '50px',
-        backGround: 'white',
+        backgroundColor: 'black',
         textAlign:'center'
 
         

@@ -4,8 +4,10 @@ import Home from './pages/landingpage'
 import Login from './pages/login'
 import Navbar from './Navbar'
 import Registration from './pages/registration'
-import About from './pages/About'
+import About from './pages/about'
 import './App.css'
+import AppContext from './AppContext'
+import Profile from './pages/profile'
 
 
 
@@ -19,6 +21,7 @@ function App() {
   )
 
   return (
+    <AppContext.Provider value={[globalState,setGlobalState]}>
 <BrowserRouter>
     <div className='App'>
   <Navbar/>
@@ -28,12 +31,12 @@ function App() {
     <Route path='/login' component={Login} />
     <Route path='/register' component={Registration} />
     <Route path='/about' component={About} />
-
-    <Route path='/about' component={About} />
+    <Route path='/profile' component={Profile} />
 
   </Switch>
     </div>
     </BrowserRouter>
+    </AppContext.Provider>
   );
 }
 

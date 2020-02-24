@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-export default class about extends Component {
-    render() {
+function About() {
+    
         return (
                 <div>
                     <div style={{
@@ -28,4 +28,6 @@ export default class about extends Component {
                 </div>
         )
     }
-}
+
+
+export default About

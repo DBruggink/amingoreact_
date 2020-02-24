@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Banner=(prop)=> {
     const bannerStyle={
@@ -22,7 +23,9 @@ const Banner=(prop)=> {
             
     <h1 style={headerStyle}>{prop.header}</h1>
     <center>
+        <Link to='/register'>
     <button type="button" className="btn btn-primary" >Register</button>
+    </Link>
     </center>
         </div>
     )

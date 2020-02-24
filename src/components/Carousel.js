@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {Link} from 'react-router-dom'
+import AppContext from '../AppContext'
 
 
 import { makeStyles } from "@material-ui/core/styles"
@@ -29,6 +31,25 @@ const Carousel= ()=>{
 
   }
   
+  const[globalState,setGlobalState]=useContext(AppContext)
+  
+  const logOut=()=>{
+    setGlobalState(
+      {
+        ...globalState,
+        loggedIn:false
+      }
+    )
+  }
+
+    const logIn =()=>{
+      setGlobalState(
+        {
+          ...globalState,
+          loggedIn:true
+        }
+      )
+      }
   
   return(
 
@@ -40,7 +61,9 @@ const Carousel= ()=>{
       <div class="carousel-caption  d-md-block" style={headerStyle}>
     <h5>Welcome</h5>
     <p>Below is a link so you can find out more about us</p>
+    <Link to='/about'>
     <button className="btn btn-primary">About us</button>
+    </Link>
     </div>
     </div>
     <div className="carousel-item">
@@ -48,7 +71,9 @@ const Carousel= ()=>{
       <div class="carousel-caption  d-md-block" style={headerStyle}>
     <h5>Enjoy Sports?</h5>
     <p>Below is a link to the Log in page</p>
+    <Link to='/login'>
     <button className="btn btn-primary">Login</button>
+    </Link>
     </div>
     </div>
     
@@ -56,8 +81,24 @@ const Carousel= ()=>{
       <img className="d-block w-100" src="https://images.unsplash.com/photo-1480099225005-2513c8947aec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1465&q=80" alt="Rugby" style={imgStyle}/>
       <div class="carousel-caption  d-md-block" style={headerStyle}>
     <h5>Why not join a game?</h5>
-    <p>Below is a link to all out current events</p>
-    <button className="btn btn-primary">Events</button>
+    <p>Below is a link to your Profile, don't forget to login</p>
+   {      
+   globalState.loggedIn=== false &&
+  
+  <Link to={'./login'}>
+    <button className="btn btn-primary">Profile</button>
+  </Link>
+   }
+   {
+     globalState.loggedIn===true&&
+     <Link to={'./profile'}>
+    
+    <button className="btn btn-primary">Profile</button>
+     </Link>
+   }
+    
+    
+    
     </div>
     </div>
   </div>

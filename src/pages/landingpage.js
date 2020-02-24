@@ -43,12 +43,7 @@ function App() {
     
     
      
-     <center>
-        <CounterButton/>
-        </center>
-     <center>
-      <RedBlueButton/>
-     </center>
+   
      <center>
     <LoadButton/>
      </center>
@@ -83,7 +78,7 @@ function App() {
         
      
         
-        <Navbar/>
+       
     </div>
   );
 }
