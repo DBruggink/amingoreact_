@@ -1,4 +1,10 @@
 import React, {useState} from 'react'
+import { unmountComponentAtNode } from 'react-dom'
+
+
+
+
+
 
 const EmailSub=()=>{
 
@@ -9,7 +15,11 @@ const EmailSub=()=>{
 
     const save=()=>{
         setState({...state, saved: true})
+    
     }
+   
+    
+    
 
 
     if(state.saved === false) {
@@ -41,14 +51,12 @@ return(
           <center>
           <div className="alert alert-success" role="alert" >
 	You have been successfully subscribed!
-</div></center>
-            
-        
-      
-
-            
+</div></center>          
         )
     }
+    
+
+    
 
 
 

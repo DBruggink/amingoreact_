@@ -1,8 +1,14 @@
 
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import AppContext from '../AppContext'
 
 function profile(){
+    
+    
+   
+  
+    
     return(
 
         <div>

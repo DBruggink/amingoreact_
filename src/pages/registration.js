@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
+import Logo from '../AlphaSportBlack.png'
 
 
 const Registration=()=>{
@@ -18,7 +19,16 @@ const Registration=()=>{
       flexDirection: 'column',
        textAlign: 'left'
     }
+    const logoStyle ={
+        width:'150px',
+        alt: '300px',
+        marginLeft:'180px'
+    }
 
+    const headerStyle={
+        marginTop:'-50px'
+
+    }
   
 
   return (
@@ -27,7 +37,9 @@ const Registration=()=>{
 
     <div className="register" style={regStyle}>
         <form>
-                <h3>Sign Up</h3>
+                <img src={Logo} style={logoStyle}/>
+                <h3 style={headerStyle}>Sign Up</h3>
+                
 
                 <div className="form-group">
                     <label>First name</label>

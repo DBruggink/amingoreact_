@@ -8,6 +8,8 @@ import About from './pages/about'
 import './App.css'
 import AppContext from './AppContext'
 import Profile from './pages/profile'
+import Footer from './Footer'
+import Feed from './pages/feed'
 
 
 
@@ -32,8 +34,10 @@ function App() {
     <Route path='/register' component={Registration} />
     <Route path='/about' component={About} />
     <Route path='/profile' component={Profile} />
+    <Route path='/feed' component={Feed}/>
 
   </Switch>
+  <Footer/>
     </div>
     </BrowserRouter>
     </AppContext.Provider>

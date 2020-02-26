@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 import AppContext from './AppContext'
+import Logo from './AlphaSportBlack.png'
 
 const Navbar= ()=>{
 
@@ -15,12 +16,19 @@ const Navbar= ()=>{
     )
   }
 
+  const logoStyle ={
+      width:'150px',
+      alt: '300px'
+  }
    
   
     return(
         <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark" >
    <Link to={'./'}>
-  <a className="navbar-brand" href="#">Alpha Sport</a>
+  <a className="navbar-brand" href="#">
+    <img src={Logo} style={logoStyle}/>
+  
+  </a>
  
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     
@@ -37,10 +45,11 @@ const Navbar= ()=>{
         <a className="nav-link" href="#">Register<span className="sr-only">(current)</span></a>
       </li>
       </Link>
+      <Link to={'./feed'}>
       <li className="nav-item">
         <a className="nav-link" href="#">Feed<span className="sr-only">(current)</span></a>
       </li>
-      
+      </Link>
       <Link to={'./about'}>
       <li className="nav-item">
         <a className="nav-link" href="/about">About Us <span className="sr-only">(current)</span></a>

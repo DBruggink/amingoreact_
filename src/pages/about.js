@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ContactForm from '../ContactForm'
 
 function About() {
     
@@ -24,9 +25,17 @@ function About() {
                             showing up. <br></br>Sign up now and create your very first sporting event!
 
                         </p>
+                    
+                  
+                    
                     </div>
+
+                <ContactForm/>
+                        
                 </div>
-        )
+                       
+                    
+                    )
     }
 
 

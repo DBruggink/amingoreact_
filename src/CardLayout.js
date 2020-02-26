@@ -4,10 +4,11 @@ const CardLayout = (prop)=>{
     const style={
         display:'Flex',
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'space-around',
         marginTop: '50px',
-        backgroundColor: 'black',
+        marginLeft:'50%',
+        
         textAlign:'center'
 
         

@@ -13,6 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import AppContext from '../AppContext'
+import Logo from '../AlphaSportBlack.png'
 
 
 function Copyright() {
@@ -84,6 +85,14 @@ export default function SignInSide() {
         }
       )
       }
+      
+      const logoStyle ={
+        width:'150px',
+        alt: '300px',
+        marginRight:'40px'
+    }
+
+
 
   return (
 
@@ -96,9 +105,9 @@ export default function SignInSide() {
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
+          
+          <img src={Logo} style={logoStyle}/>
+          
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
