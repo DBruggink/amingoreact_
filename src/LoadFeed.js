@@ -40,7 +40,7 @@ const LoadFeedButton = () => {
 
     else if(state.feed.length === 0) {
         return (
-            <button onClick={loadFeed} style={buttonStyle}>Load Feed</button>
+            <button onClick={loadFeed} style={buttonStyle} className='btn btn-danger'>Load Feed</button>
         )
     } else {
         return (
@@ -50,10 +50,11 @@ const LoadFeedButton = () => {
                state.feed.map(
                     (item)=>
                     <FeedCard 
-                        title={``}
+                        comments={item.comments}
                         image={item.image}
+                        hashtags={item.hashtags}
                         description={item.description}
-                        buttonLabel="View Post"
+                        date={item.date}
                     />
                 )
                 }
