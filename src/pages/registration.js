@@ -36,6 +36,7 @@ const Registration=()=>{
     let occupation;
     let age;
     let bio;
+    let image
 
     const [state, setState] = useState(
         {saved: false}
@@ -55,6 +56,7 @@ const Registration=()=>{
                 occupation: occupation.value,
                 age: age.value,
                 bio: bio.value,
+                image: image.value
             })
         })
         .then(response =>setState({...state, saved: true}))
@@ -99,6 +101,11 @@ const Registration=()=>{
                     <label>Age</label>
                     <input type="number" className="form-control" placeholder="Enter age" ref={(elem)=>age = elem}/>
                 </div>
+                <form action="/user/create">
+                    <label for='image'>Select profile Picture:</label>
+                    <input type="file" type='image' id='image' name='image' accept='image/*' ref={(elem)=>image = elem} type='submit'/>
+                    
+                </form>
                 <div>
                 <label>Bio</label>
                 <textarea type='text' className="form-control" placeholder='Tell us about yourself' ref={(elem)=>bio = elem}></textarea>
