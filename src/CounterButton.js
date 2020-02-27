@@ -19,7 +19,7 @@ const CounterButton=()=>{
         return(
 
         <button onClick={increaseCount} className="btn-danger">
-            {`Your count: ${state.count}`}
+            {`Likes: ${state.count}`}
         </button>
         )
 

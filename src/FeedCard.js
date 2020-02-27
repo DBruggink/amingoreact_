@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './AlphaSportBlack.png'
+import CounterButton from './CounterButton'
 
 
 const FeedCard= (prop)=>{
@@ -15,26 +16,37 @@ const FeedCard= (prop)=>{
         height:'100px',
         
     }
+
+    const postStyle={
+      marginTop:'-50px'
+    }
+
+    const headerStyle={
+      fontWeight:'bold',
+      
+      fontSize:'large'
+    }
+
+
+   
       return(
+        <div>
       <div className="card" style={cardStyle}>
       <img src={prop.image}  style={imgStyle} />
-      <div className="card-body" >
-        <h5 className='car-header'>{prop.comments}</h5>
-        <p className="card-text">{prop.description}</p>
+      <div className="card-body" style={postStyle} >
+        <h5 className='car-header'style={headerStyle}>{prop.fullname}</h5>
+        <p className="card-text" >{prop.description}</p>
         <p className="card-text">{prop.hashtags}</p>
-          <label for="country">Country</label>
-            <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-            </select>
+          
+            <p className="card-text">{prop.date}</p>
         <br/>
-
-      
-<button className="btn btn-primary">Like</button>
+            <p className="card-text">{prop.emirate}</p>
+      </div>
+</div>
+<CounterButton/>
 
       </div>
-    </div>
+    
     ) 
   }
 

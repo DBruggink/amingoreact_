@@ -50,10 +50,11 @@ const LoadFeedButton = () => {
                state.feed.map(
                     (item)=>
                     <FeedCard 
-                        comments={item.comments}
+                        fullname={item.fullname}
                         image={item.image}
                         hashtags={item.hashtags}
                         description={item.description}
+                        emirate={item.emirate}
                         date={item.date}
                     />
                 )
