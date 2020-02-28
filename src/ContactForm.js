@@ -31,7 +31,9 @@ const ContactForm=()=>{
         backgroundColor: '#f2f2f2',
         padding: '20px',
         flex: '1',
-        flexDirection:'column'
+        flexDirection:'column',
+        alignItems: 'center',
+        backgroundColor: 'grey'
     
       }
     
