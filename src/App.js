@@ -18,7 +18,8 @@ function App() {
   
   const[globalState,setGlobalState]=useState(
     {
-      loggedIn: false
+      loggedIn: false,
+      updated: false
     }
   )
 
