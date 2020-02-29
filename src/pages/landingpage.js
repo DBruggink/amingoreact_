@@ -23,11 +23,13 @@ import styles from "../assets/jss/material-kit-react/views/landingPage";
 const useStyles = makeStyles(styles);
 
 
-function App() {
-  const classes = useStyles();
-  return (
+function Home() {
+  
+  
+   return (
+    
     <div className="App">
-      
+     
      
      <EmailSub/>
     
@@ -83,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

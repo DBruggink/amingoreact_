@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
-import Logo from './AlphaSportBlack.png'
+import React, {useState, useContext} from 'react'
 import AppContext from './AppContext'
+
 
 const formStyle={
     backgroundColor:'grey',
@@ -25,41 +25,41 @@ const selectStyle ={
 
 const FeedForm= (prop)=>{
 
-    let fullname;
-    let description;
+    const[globalState,setGlobalState]=useContext(AppContext)
+   
+
+    let userComment;
     let emirate;
-    let likes;
-    
-    
-    
+    let hashtags;
     let image
 
+
     const [state, setState] = useState(
-        {updated: false}
+        {saved: false}
     )
 
     const sendFeed = () => {
         // Fetch request goes
-        fetch('http://localhost:3010/feed/create', 
+        fetch(`${process.env.REACT_APP_BACKEND_URL}feed/create`,
         {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                fullname: fullname.value,
-                description: description.value,
+                description: userComment.value,
                 emirate: emirate.value,
-                likes: likes.value,
+                hashtags: hashtags.value,
                 image: image.value
             })
         })
-        .then(response =>setState({...state, updated: true}))
+        .then(response =>setState({...state, saved: true}))
     }
-    
 
     
 
     
-    if(state.updated === false) {
+
+    
+    if(state.saved === false) {
     return(
         <div className="container feed-form" style={formStyle}>
             <form>
@@ -67,19 +67,30 @@ const FeedForm= (prop)=>{
                     <img src={prop.image} style={imgStyle}/>
                     <div>
                 <label>Write your post!</label>
-                <textarea type='text' className="form-control" placeholder='Post' ref={(elem)=>description = elem}></textarea>
+                
+                <textarea type='text' className="form-control" placeholder='Post' ref={(elem)=>userComment = elem}></textarea>
+                
                 </div>
                 </div>
+                <div>
+                <label>#Hashtags</label>
+                    <input type="text" className="form-control" placeholder="Enter Hashtags" ref={(elem)=>hashtags = elem}/>
+                </div>
+                <form action="/user/create">
+                    <label for='image'>Upload a picture:</label>
+                    <input type="file" type='image' id='image' name='image' accept='image/*' ref={(elem)=>image = elem} type='submit'/>
+                    
+                </form>
                 
                 <br/>
                 <div>
                 <select id="country" name="country" style={selectStyle} ref={(elem)=>emirate = elem}>
-            <option value="australia">Dubai</option>
-            <option value="canada">Abu Dhabi</option>
-            <option value="usa">Sharjah</option>
-            <option value="usa">Ajman</option>
-            <option value="usa">Fujairah</option>
-            <option value="usa">Ras al Khaimah</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Abu Dhabi">Abu Dhabi</option>
+            <option value="Sharjah">Sharjah</option>
+            <option value="Ajman">Ajman</option>
+            <option value="Fujairah">Fujairah</option>
+            <option value="Ras al Khaimah">Ras al Khaimah</option>
             </select>
             </div>
             <br/>
@@ -101,7 +112,7 @@ else{
                     <img src={prop.image} style={imgStyle}/>
                     <div>
                 <label>Want to post another?</label>
-                <textarea type='text' className="form-control" placeholder='Post' ref={(elem)=>description = elem}></textarea>
+                <textarea type='text' className="form-control" placeholder='Post' ref={(elem)=>userComment = elem}></textarea>
                 </div>
                 </div>
                 

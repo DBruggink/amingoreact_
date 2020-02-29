@@ -44,7 +44,7 @@ const Registration=()=>{
 
     const sendRegister = () => {
         // Fetch request goes
-        fetch('http://localhost:3010/user/register', 
+        fetch(`${process.env.REACT_APP_BACKEND_URL}user/register`, 
         {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
